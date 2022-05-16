@@ -3,7 +3,7 @@ This repo is a fork from main repo and have new features and maybe have some bug
 
 
 # THIS TOOL IS BASE ON FBCHAT API
-more info: https://fbchat.readthedocs.io/en/stable/api.html
+more info: https://fbchat.readthedocs.io/en/stable/api.html \n
 api source: https://rapidapi.com/
 
 # DEMO
