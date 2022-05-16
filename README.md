@@ -10,7 +10,7 @@ api source: https://rapidapi.com/
 https://www.youtube.com/watch?v=YXE9nASPNec&t=81s
 
 
-> Dont abuse
-> Use Dummy
-> Enjoy!
+Dont abuse
+Use Dummy
+Enjoy!
 
