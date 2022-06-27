@@ -509,6 +509,8 @@ class ChatBot(Client):
                     sendQuery()
                 except:
                     pass
+                
+             ## YOU CAN ADD MORE RESPONSE HERE   
             elif("how are you" in msg):
                 reply = "I'm doing really well, thank you."
                 sendMsg()
@@ -630,6 +632,7 @@ class ChatBot(Client):
                   thread_type=thread_type)
 
 
+        ## FB COOKIE HERE
 cookies = {
     "sb": "",
     "fr": "",
@@ -638,9 +641,9 @@ cookies = {
     "xs": ""
 }
 
-
+        ## FB ACCOUNT
 client = ChatBot("fb_email",
-                 "pass", session_cookies=cookies)
+                 "fb_pass", session_cookies=cookies)
 print(client.isLoggedIn())
 
 try:
