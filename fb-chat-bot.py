@@ -535,27 +535,6 @@ class ChatBot(Client):
             elif ("bye" in msg):
                 reply = "Bye-bye, butterfly."
                 sendMsg()
-            elif ("hello" in msg):
-                reply = "Hi"
-                sendMsg()
-            elif ("fuck you" in msg):
-                reply = "fuck you too bitch!"
-                sendMsg()
-            elif ("Tangina mo" in msg):
-                reply = "Tangina mo rin"
-                sendMsg()
-            elif ("Gago kaba" in msg):
-                reply = "Mas Gago ka"
-                sendMsg()
-            elif ("Bobo" in msg):
-                reply = "Mas Bobo Ka!"
-                sendMsg()
-            elif ("tanga" in msg):
-                reply = "wag tanga beh"
-                sendMsg()
-            elif ("master" in msg):
-                reply = "yow master"
-                sendMsg()
             elif (msg == "hi"):
                 reply = "Hello!"
                 sendMsg()
