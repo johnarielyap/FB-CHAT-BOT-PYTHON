@@ -339,7 +339,7 @@ class ChatBot(Client):
             headers = {
                 'content-type': "application/json",
                 'x-rapidapi-host': "microsoft-translator-text.p.rapidapi.com",
-                'x-rapidapi-key': "8cd2881885msh9933f89c5aa2186p1d8076jsn7303d42b3c66"
+                'x-rapidapi-key': "8cd2881885msh993wdwa235aa2186p1d8076jsn7303d42b3c66"
             }
 
             response = requests.request(
@@ -370,7 +370,7 @@ class ChatBot(Client):
 
             headers = {
                 'x-rapidapi-host': "bing-image-search1.p.rapidapi.com",
-                'x-rapidapi-key': "8cd2881885msh9933f89c5aa2186p1d8076jsn7303d42b3c66"
+                'x-rapidapi-key': "8cd2842dfrassh9933f89c5aa2186p1d8076jsn7303d42b3c66"
             }
             print("sending requests...")
             response = requests.request(
@@ -520,6 +520,15 @@ class ChatBot(Client):
             elif ("i beautiful" in msg):
                 reply = "No you're not"
                 sendMsg()
+            elif ("pangit" in msg):
+                reply = "mas pangit ka"
+                sendMsg()
+            elif ("Ganda mo" in msg):
+                reply = "mana sayo beh"
+                sendMsg()
+            elif ("i love you" in msg):
+                reply = "I hate You"
+                sendMsg()
             elif ("old are you" in msg):
                 reply = "I'm old enough to be your sugar daddy. Ughh"
                 sendMsg()
@@ -529,6 +538,9 @@ class ChatBot(Client):
             elif ("hello" in msg):
                 reply = "Hi"
                 sendMsg()
+            elif ("fuck you" in msg):
+                reply = "fuck you too bitch!"
+                sendMsg()
             elif ("Tangina mo" in msg):
                 reply = "Tangina mo rin"
                 sendMsg()
@@ -537,6 +549,12 @@ class ChatBot(Client):
                 sendMsg()
             elif ("Bobo" in msg):
                 reply = "Mas Bobo Ka!"
+                sendMsg()
+            elif ("tanga" in msg):
+                reply = "wag tanga beh"
+                sendMsg()
+            elif ("master" in msg):
+                reply = "yow master"
                 sendMsg()
             elif (msg == "hi"):
                 reply = "Hello!"
@@ -648,5 +666,5 @@ print(client.isLoggedIn())
 try:
     client.listen()
 except:
-    time.sleep(3)
+    time.sleep(5)
     client.listen()
