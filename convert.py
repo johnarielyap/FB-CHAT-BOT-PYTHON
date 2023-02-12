@@ -1,6 +1,7 @@
 import json
 
 cookies = input("Paste fb cookies here: ")
+cookies = input("Paste here: ")
 cookies = cookies.replace("=", ":").replace(";", ",")[:-1]
 cookies_dict = {}
 cookies = cookies.split(",")
