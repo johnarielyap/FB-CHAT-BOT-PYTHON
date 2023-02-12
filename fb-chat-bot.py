@@ -518,7 +518,7 @@ class ChatBot(Client):
                 reply = "No you're not"
                 sendMsg()
             elif ("old are you" in msg):
-                reply = "I'm old enough to be your sugar daddy."
+                reply = "I'm old enough to be your sugar daddy. Ughh"
                 sendMsg()
             elif ("bye" in msg):
                 reply = "Bye-bye, butterfly."
@@ -611,28 +611,15 @@ class ChatBot(Client):
         self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
 
-    def onAdminAdded(self, mid=None, added_id=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = f"{added_id} You're an Admin now"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
-
-    def onNicknameChange(self, mid=None, author_id=None, new_nickname=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = f"You just changed the nickname to {new_nickname} But why?🤔"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
-
+   
     def onPeopleAdded(self, mid=None, added_ids=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
         reply = f"Welcome {added_ids} to the fam, go grab some coffee ☕️ and lets code together👨🏼‍💻."
         self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
 
-    def onPersonRemoved(self, mid=None, removed_id=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = f"Goodbye my friend, I hope our paths cross again… so I can punch you!."
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
 
 
-        ## FB COOKIE HERE
+## FB COOKIE HERE
 cookies = {
     "sb": "",
     "fr": "",
@@ -641,9 +628,9 @@ cookies = {
     "xs": ""
 }
 
-        ## FB ACCOUNT
-client = ChatBot("fb_email",
-                 "fb_pass", session_cookies=cookies)
+## FB ACCOUNT
+client = ChatBot("fb_email_here",
+                 "fb_pass_here", session_cookies=cookies)
 print(client.isLoggedIn())
 
 try:
