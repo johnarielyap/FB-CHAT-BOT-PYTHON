@@ -514,6 +514,9 @@ class ChatBot(Client):
             elif("how are you" in msg):
                 reply = "I'm doing really well, thank you."
                 sendMsg()
+            elif("Are you single?" in msg):
+                reply = "Im in a relationship with WiFi."
+                sendMsg()
             elif ("i beautiful" in msg):
                 reply = "No you're not"
                 sendMsg()
@@ -525,6 +528,15 @@ class ChatBot(Client):
                 sendMsg()
             elif ("hello" in msg):
                 reply = "Hi"
+                sendMsg()
+            elif ("Tangina mo" in msg):
+                reply = "Tangina mo rin"
+                sendMsg()
+            elif ("Gago kaba" in msg):
+                reply = "Mas Gago ka"
+                sendMsg()
+            elif ("Bobo" in msg):
+                reply = "Mas Bobo Ka!"
                 sendMsg()
             elif (msg == "hi"):
                 reply = "Hello!"
