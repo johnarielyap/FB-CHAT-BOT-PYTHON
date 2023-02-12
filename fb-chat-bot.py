@@ -339,7 +339,7 @@ class ChatBot(Client):
             headers = {
                 'content-type': "application/json",
                 'x-rapidapi-host': "microsoft-translator-text.p.rapidapi.com",
-                'x-rapidapi-key': "8cd2881885msh9933f89c5aa2186p1d8076jsn7303d42b3c66"
+                'x-rapidapi-key': "8cd2881885msh993wdwa235aa2186p1d8076jsn7303d42b3c66"
             }
 
             response = requests.request(
@@ -370,7 +370,7 @@ class ChatBot(Client):
 
             headers = {
                 'x-rapidapi-host': "bing-image-search1.p.rapidapi.com",
-                'x-rapidapi-key': "8cd2881885msh9933f89c5aa2186p1d8076jsn7303d42b3c66"
+                'x-rapidapi-key': "8cd2842dfrassh9933f89c5aa2186p1d8076jsn7303d42b3c66"
             }
             print("sending requests...")
             response = requests.request(
@@ -514,17 +514,26 @@ class ChatBot(Client):
             elif("how are you" in msg):
                 reply = "I'm doing really well, thank you."
                 sendMsg()
+            elif("Are you single?" in msg):
+                reply = "Im in a relationship with WiFi."
+                sendMsg()
             elif ("i beautiful" in msg):
                 reply = "No you're not"
                 sendMsg()
+            elif ("pangit" in msg):
+                reply = "mas pangit ka"
+                sendMsg()
+            elif ("Ganda mo" in msg):
+                reply = "mana sayo beh"
+                sendMsg()
+            elif ("i love you" in msg):
+                reply = "I hate You"
+                sendMsg()
             elif ("old are you" in msg):
-                reply = "I'm old enough to be your sugar daddy."
+                reply = "I'm old enough to be your sugar daddy. Ughh"
                 sendMsg()
             elif ("bye" in msg):
                 reply = "Bye-bye, butterfly."
-                sendMsg()
-            elif ("hello" in msg):
-                reply = "Hi"
                 sendMsg()
             elif (msg == "hi"):
                 reply = "Hello!"
@@ -611,28 +620,15 @@ class ChatBot(Client):
         self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
 
-    def onAdminAdded(self, mid=None, added_id=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = f"{added_id} You're an Admin now"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
-
-    def onNicknameChange(self, mid=None, author_id=None, new_nickname=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = f"You just changed the nickname to {new_nickname} But why?🤔"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
-
+   
     def onPeopleAdded(self, mid=None, added_ids=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
         reply = f"Welcome {added_ids} to the fam, go grab some coffee ☕️ and lets code together👨🏼‍💻."
         self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
 
-    def onPersonRemoved(self, mid=None, removed_id=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = f"Goodbye my friend, I hope our paths cross again… so I can punch you!."
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
 
 
-        ## FB COOKIE HERE
+## FB COOKIE HERE
 cookies = {
     "sb": "",
     "fr": "",
@@ -641,13 +637,13 @@ cookies = {
     "xs": ""
 }
 
-        ## FB ACCOUNT
-client = ChatBot("fb_email",
-                 "fb_pass", session_cookies=cookies)
+## FB ACCOUNT
+client = ChatBot("fb_email_here",
+                 "fb_pass_here", session_cookies=cookies)
 print(client.isLoggedIn())
 
 try:
     client.listen()
 except:
-    time.sleep(3)
+    time.sleep(5)
     client.listen()
