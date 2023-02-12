@@ -3,3 +3,4 @@ wolframalpha
 requests
 selenium
 webdriver_manager
+openai
